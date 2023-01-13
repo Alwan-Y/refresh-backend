@@ -15,7 +15,6 @@ class AuthenticationsHandler {
     async postAuthenticationHandler(request, h) {
         try {
             console.log('masuk auth');
-            console.log(request.payload);
             this._validator.validatePostAuthenticationPayload(request.payload);
 
             const { username, password } = request.payload;
