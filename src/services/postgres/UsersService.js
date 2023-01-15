@@ -31,7 +31,6 @@ class UsersService {
     }
 
     async verifyNewUsername(username) {
-        console.log('masuk');
         const query = {
             text: 'SELECT id FROM users WHERE username = $1',
             values: [username],
