@@ -73,9 +73,6 @@ class NotesHandler {
 
             const { id: credentialId } = request.auth.credentials;
 
-            console.log('masuk');
-            console.log(credentialId);
-            console.log(id);
             await this._service.verifyNoteAccess(id, credentialId);
             const note = await this._service.getNoteById(id);
             return {
